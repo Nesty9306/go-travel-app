@@ -3,8 +3,8 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import HeroImage from "../assets/hero.png"
-import * as Animatable from "react-native-animatable"
+import HeroImage from "../assets/hero.png";
+import * as Animatable from "react-native-animatable";
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -37,19 +37,27 @@ const HomeScreen = ({ navigation }) => {
       {/* Image Container */}
 
       <View className="flex-1 relative items-center justify-center">
-       <Animatable.Image animation="fadeIn" easing="ease-in-out" source={HeroImage} className="w-full h-full object-cover"/>
+        <Animatable.Image
+          animation="fadeIn"
+          easing="ease-in-out"
+          source={HeroImage}
+          className="w-full h-full object-cover"
+        />
 
-
-
-       <TouchableOpacity onPress={() => navigation.navigate("Discover")} className="absolute bottom-36 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
-         <Animatable.View animation="pulse" easing="ease-in-out" iterationCount="infinite" className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
-           <Text className="text-gray-50 text-[30px] font-semibold">Go</Text>
-         </Animatable.View>
-       </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Discover")}
+          className="absolute bottom-36 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center"
+        >
+          <Animatable.View
+            animation="pulse"
+            easing="ease-in-out"
+            iterationCount="infinite"
+            className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]"
+          >
+            <Text className="text-gray-50 text-[30px] font-semibold">Go</Text>
+          </Animatable.View>
+        </TouchableOpacity>
       </View>
-
-
-
     </SafeAreaView>
   );
 };
